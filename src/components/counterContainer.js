@@ -1,4 +1,4 @@
-import { connect } from "react-redux";
+ import { connect } from "react-redux";
 import Counter from "./counter";
 import { increment, decrement, reset } from "../actions";
 
@@ -16,3 +16,9 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 // add code here
+const CounterContainer = connect(
+mapStateToProps,
+mapDispatchToProps
+)(Counter);
+
+export default CounterContainer;
